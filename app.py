@@ -27,3 +27,7 @@ async def YTtranscript(Link_request:Linkurl):
     print(transcript_text)
     # print(Link_request.url)
     return transcript_text
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
